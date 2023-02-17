@@ -1,7 +1,6 @@
 *{
   padding: 0;
   margin: 0;
-  /* background-color: rgb(36, 35, 34); */
   font-family: inter;
 }
 
@@ -9,16 +8,13 @@
   position: relative;
   width: 550px;
   height: 779px;
-  background-color: aquamarine;
   margin: 0 auto;
-
+  border: 1px solid black;
 }
 
 .film-bgImg{
 width: 70px; 
 height: 61.25px; 
-
-
 position: absolute;
 left: 43.64%;
 right: 43.64%;
@@ -28,23 +24,16 @@ bottom: 38.22%;
 
 .start-exploring{
   /* Start exploring */
-
-
 position: absolute;
 width: 148px;
 height: 20px;
 left: 201px;
 top: 490px;
-
-font-family: 'Inter';
-font-style: normal;
 font-weight: 700;
 font-size: 18px;
 line-height: 20px;
 /* identical to box height, or 111% */
-
 text-align: center;
-
 color: #DFDDDD;
 
 }
@@ -52,6 +41,7 @@ color: #DFDDDD;
 .nav-img{
   height: 208px;
   width: 550px; 
+  background-color: rgba(0, 0, 0, 0.89);
 }
 
 .nav-header{
@@ -60,9 +50,6 @@ width: 359px;
 height: 47.55px;
 left: 42px;
 top: 82.45px;
-
-font-family: 'Inter';
-font-style: normal;
 font-weight: 800;
 font-size: 42.7947px;
 line-height: 24px;
@@ -150,11 +137,11 @@ border-radius: 0px 6px 6px 0px;
 /* card */
 
 .card{
-position: absolute;
+ position: absolute; 
 width: 462px;
 height: 147.41px;
-left: 44px;
-top: 271px;
+left: 44px; 
+top: 271px; 
 background:rgba(213, 8, 8, 0.127);
 }
 
@@ -255,3 +242,8 @@ letter-spacing: 0em;
 text-align: left;
 color: #6B7280;
 }
+
+
+ #renderArea :first-child{
+  margin-top: 44px;
+} 
