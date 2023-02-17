@@ -10,7 +10,7 @@ searchBtn.addEventListener("click",(e)=>{
     searchString=searchInput.value
     console.log(searchString);
 
-    fetch(`http://www.omdbapi.com/?s=${searchString}&apikey=abfb5a92`)
+    fetch(`https://www.omdbapi.com/?s=${searchString}&apikey=abfb5a92`)
     .then((res) => res.json())
     .then(data => {console.log(data) ,secondFetch(data)})
 
