@@ -1,4 +1,4 @@
-import './style.css'
+// import './style.css'
 var renderArea=document.getElementById("renderArea")
 let searchBtn=document.getElementById("search-button")
 var searchInput=document.querySelector(".search-input")
