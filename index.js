@@ -4,6 +4,7 @@ let searchBtn=document.getElementById("search-button")
 var searchInput=document.querySelector(".search-input")
 var searchString=""
 var movieArray=[]
+var localArray=[]
 
 
 searchBtn.addEventListener("click",(e)=>{
@@ -53,9 +54,9 @@ let addtowatchBtn=document.querySelector(".add-watchlist-icon")
 
 renderArea.addEventListener("click",(e)=>{
   //console.log(document.getElementById(e.target.id).parentElement)
-  console.log(e.target.id)
-})
-
-movieArray.forEach()
+  //console.log(e.target.id)
+  let element=movieArray.find(item=>item.id==(e.target.id))
+  console.log(element);
+});
 
 
