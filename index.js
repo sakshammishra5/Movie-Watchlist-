@@ -1,12 +1,10 @@
  import './style.css'
 var renderArea=document.getElementById("renderArea")
-let searchBtn=document.getElementById("search-button")
+var searchBtn=document.getElementById("search-button")
 var searchInput=document.querySelector(".search-input")
 var searchString=""
 var movieArray=[]
 var localArray=[]
-var storedmovie=[]
-
 
 searchBtn.addEventListener("click",(e)=>{
     e.preventDefault()
@@ -50,8 +48,6 @@ renderArea.innerHTML+=
 `
 }
 
-let addtowatchBtn=document.querySelector(".add-watchlist-icon")
-//console.log(addtowatchBtn)
 
 renderArea.addEventListener("click",(e)=>{
   //console.log(document.getElementById(e.target.id).parentElement)
@@ -64,29 +60,6 @@ renderArea.addEventListener("click",(e)=>{
 
 function storeInlocalstorage(localArray){
 localStorage.setItem('movieString',JSON.stringify(localArray))
-getfromlocalstorage()
 }
 
 
-function getfromlocalstorage(){
-   storedmovie=JSON.parse(localStorage.getItem('movieString'))
-  console.log(storedmovie);
-}
-
-var watchlistArea=document.getElementById("Watchlist-renderArea")
-
-storedmovie.forEach((item) => {
-  console.log(item);
- watchlistArea.innerHTML+=
- `<div class="card" id="${item.id}">
-<div class="card-poster-img"><img src=${item.Poster} alt=""></div>
-<div class="card-info">
-  <div><p>${item.Title}</p><img src="./Images/Icon (5).png" alt=""><p>${item.Rating}</p></div>
-  <div><p>${item.Runtime}</p><p>${item.Genre}</p><a id="${item.id}" class="add-watchlist-icon" href="#"><img id="${item.id}" src="./Images/IconplusIcon.png" alt="#"></a><p>watchlist</p></div>
-  <div><p>${item.Plot}</p></div>
-</div>
-</div>
- `
-});
-
-export {storedmovie}
